@@ -6,6 +6,7 @@ import { Sphere, MeshDistortMaterial } from "@react-three/drei";
 import { motion } from "framer-motion";
 
 function AnimatedSphere() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const meshRef = useRef<any>(null);
   
   useFrame((state) => {

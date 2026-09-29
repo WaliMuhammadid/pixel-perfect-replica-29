@@ -35,7 +35,7 @@ export default function Contact() {
               LET&apos;S <br/> <span className="text-primary">TALK</span>
             </h1>
             <p className="text-xl text-foreground/70 mb-12">
-              Have a project in mind? We'd love to hear about it. Drop us a message and we'll get back to you within 24 hours.
+              Have a project in mind? We&apos;d love to hear about it. Drop us a message and we&apos;ll get back to you within 24 hours.
             </p>
             
             <div className="flex flex-col gap-8 mb-12">
@@ -99,7 +99,7 @@ export default function Contact() {
                     </svg>
                   </div>
                   <h3 className="font-display text-3xl font-bold mb-4">Message Sent</h3>
-                  <p className="text-foreground/70 mb-8">Thank you for reaching out. We'll be in touch shortly.</p>
+                  <p className="text-foreground/70 mb-8">Thank you for reaching out. We&apos;ll be in touch shortly.</p>
                   <button type="button" onClick={() => setStatus("idle")} className="px-8 py-3 bg-white text-black font-bold rounded-full">
                     Send Another
                   </button>

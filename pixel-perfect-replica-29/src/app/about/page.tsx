@@ -40,7 +40,7 @@ export default function About() {
                   <div className="text-primary font-display text-5xl font-bold mb-4 opacity-30">0{i+1}</div>
                   <h3 className="text-2xl font-bold mb-4">{val}</h3>
                   <p className="text-foreground/60">
-                    We push the boundaries of what's possible on the web, never settling for 'good enough' when 'extraordinary' is within reach.
+                    We push the boundaries of what&apos;s possible on the web, never settling for &apos;good enough&apos; when &apos;extraordinary&apos; is within reach.
                   </p>
                 </div>
              ))}

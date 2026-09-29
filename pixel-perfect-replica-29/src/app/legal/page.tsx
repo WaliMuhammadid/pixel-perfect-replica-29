@@ -25,7 +25,7 @@ export default function Legal() {
         <div className="prose prose-invert prose-lg max-w-none text-foreground/80">
           <h2 className="text-2xl font-display font-bold text-white mt-12 mb-4">1. Privacy Policy</h2>
           <p>
-            Softadex is committed to protecting your privacy. We do not sell, trade, or rent users' personal identification information to others. 
+            Softadex is committed to protecting your privacy. We do not sell, trade, or rent users&apos; personal identification information to others. 
             We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our business partners.
           </p>
           

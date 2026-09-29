@@ -24,7 +24,7 @@ export default function NotFound() {
         
         <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">Lost in the Void</h1>
         <p className="text-foreground/70 text-lg mb-12 max-w-md mx-auto">
-          The page you are looking for has evaporated into the digital ether. Let's get you back on track.
+          The page you are looking for has evaporated into the digital ether. Let&apos;s get you back on track.
         </p>
         
         <Link 
