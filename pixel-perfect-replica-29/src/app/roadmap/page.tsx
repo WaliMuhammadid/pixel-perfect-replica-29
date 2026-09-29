@@ -1,10 +1,6 @@
 "use client";
 
 import { useRef } from "react";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import SmoothScroll from "@/components/ui/SmoothScroll";
-import Cursor from "@/components/ui/Cursor";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { roadmapData } from "@/lib/data";
 
@@ -18,10 +14,10 @@ export default function Roadmap() {
   const pathHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <SmoothScroll>
-      <Cursor />
-      <div className="noise-bg" />
-      <Navbar />
+    <>
+      
+      
+      
       
       <main className="min-h-screen pt-40 pb-24 px-6 max-w-5xl mx-auto w-full">
         <motion.div 
@@ -78,7 +74,7 @@ export default function Roadmap() {
         </div>
       </main>
       
-      <Footer />
-    </SmoothScroll>
+      
+    </>
   );
 }

@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import SmoothScroll from "@/components/ui/SmoothScroll";
+import Cursor from "@/components/ui/Cursor";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -28,7 +32,13 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} antialiased dark`}
     >
       <body className="min-h-full flex flex-col bg-[#05060A] text-white selection:bg-[#7C5CFF] selection:text-white">
-        {children}
+        <SmoothScroll>
+          <Cursor />
+          <div className="noise-bg" />
+          <Navbar />
+          {children}
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

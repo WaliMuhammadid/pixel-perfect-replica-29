@@ -1,10 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import SmoothScroll from "@/components/ui/SmoothScroll";
-import Cursor from "@/components/ui/Cursor";
 import { motion } from "framer-motion";
 import { MapPin, Mail, MessageSquare, Link2, Globe } from "lucide-react";
 
@@ -21,10 +17,10 @@ export default function Contact() {
   };
 
   return (
-    <SmoothScroll>
-      <Cursor />
-      <div className="noise-bg" />
-      <Navbar />
+    <>
+      
+      
+      
       
       <main className="min-h-screen pt-40 pb-24 px-6 max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -158,7 +154,7 @@ export default function Contact() {
         </div>
       </main>
       
-      <Footer />
-    </SmoothScroll>
+      
+    </>
   );
 }

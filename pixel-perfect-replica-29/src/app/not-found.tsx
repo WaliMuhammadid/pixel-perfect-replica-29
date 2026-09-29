@@ -1,17 +1,14 @@
 "use client";
 
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import Cursor from "@/components/ui/Cursor";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function NotFound() {
   return (
     <>
-      <Cursor />
-      <div className="noise-bg" />
-      <Navbar />
+      
+      
+      
       
       <main className="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20">
         <motion.div
@@ -38,7 +35,7 @@ export default function NotFound() {
         </Link>
       </main>
       
-      <Footer />
+      
     </>
   );
 }

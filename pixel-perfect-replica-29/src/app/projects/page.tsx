@@ -1,10 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import SmoothScroll from "@/components/ui/SmoothScroll";
-import Cursor from "@/components/ui/Cursor";
 import { motion, AnimatePresence } from "framer-motion";
 import { projectsData } from "@/lib/data";
 import Link from "next/link";
@@ -20,10 +16,10 @@ export default function Projects() {
     : projectsData.filter(p => p.category.includes(filter) || p.tags.includes(filter));
 
   return (
-    <SmoothScroll>
-      <Cursor />
-      <div className="noise-bg" />
-      <Navbar />
+    <>
+      
+      
+      
       
       <main className="min-h-screen pt-40 pb-24 px-6 max-w-7xl mx-auto w-full">
         <div className="mb-20">
@@ -80,7 +76,7 @@ export default function Projects() {
         </motion.div>
       </main>
       
-      <Footer />
-    </SmoothScroll>
+      
+    </>
   );
 }

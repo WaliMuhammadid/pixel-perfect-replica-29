@@ -1,6 +1,3 @@
-import Navbar from "@/components/layout/Navbar";
-import SmoothScroll from "@/components/ui/SmoothScroll";
-import Cursor from "@/components/ui/Cursor";
 import Preloader from "@/components/ui/Preloader";
 import HeroSection from "@/components/sections/HeroSection";
 import MarqueeSection from "@/components/sections/MarqueeSection";
@@ -12,15 +9,14 @@ import StatsSection from "@/components/sections/StatsSection";
 import TechStack from "@/components/sections/TechStack";
 import Testimonials from "@/components/sections/Testimonials";
 import ProductsTeaser from "@/components/sections/ProductsTeaser";
-import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <SmoothScroll>
+    <>
       <Preloader />
-      <Cursor />
-      <div className="noise-bg" />
-      <Navbar />
+      
+      
+      
       
       <main className="flex flex-col min-h-screen">
         <HeroSection />
@@ -35,7 +31,7 @@ export default function Home() {
         <ProductsTeaser />
       </main>
       
-      <Footer />
-    </SmoothScroll>
+      
+    </>
   );
 }

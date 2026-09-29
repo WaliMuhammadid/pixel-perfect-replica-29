@@ -1,10 +1,6 @@
 "use client";
 
 import { use } from "react";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import SmoothScroll from "@/components/ui/SmoothScroll";
-import Cursor from "@/components/ui/Cursor";
 import { projectsData } from "@/lib/data";
 import { notFound } from "next/navigation";
 import { motion } from "framer-motion";
@@ -22,10 +18,10 @@ export default function CaseStudy({ params }: { params: Promise<{ slug: string }
   const nextProject = projectsData[(projectsData.indexOf(project) + 1) % projectsData.length];
 
   return (
-    <SmoothScroll>
-      <Cursor />
-      <div className="noise-bg" />
-      <Navbar />
+    <>
+      
+      
+      
       
       <main className="min-h-screen">
         {/* Hero */}
@@ -97,7 +93,7 @@ export default function CaseStudy({ params }: { params: Promise<{ slug: string }
         </section>
       </main>
       
-      <Footer />
-    </SmoothScroll>
+      
+    </>
   );
 }

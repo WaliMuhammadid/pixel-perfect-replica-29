@@ -1,17 +1,13 @@
 "use client";
 
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import SmoothScroll from "@/components/ui/SmoothScroll";
-import Cursor from "@/components/ui/Cursor";
 import { motion } from "framer-motion";
 
 export default function Legal() {
   return (
-    <SmoothScroll>
-      <Cursor />
-      <div className="noise-bg" />
-      <Navbar />
+    <>
+      
+      
+      
       
       <main className="min-h-screen pt-40 pb-24 px-6 max-w-4xl mx-auto w-full">
         <motion.div 
@@ -45,7 +41,7 @@ export default function Legal() {
         </div>
       </main>
       
-      <Footer />
-    </SmoothScroll>
+      
+    </>
   );
 }
