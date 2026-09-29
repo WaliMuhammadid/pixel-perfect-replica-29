@@ -30,10 +30,10 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-6 text-white">Agency</h4>
             <ul className="flex flex-col gap-4 text-foreground/60">
-              <li><Link href="#about" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="#services" className="hover:text-primary transition-colors">Services</Link></li>
-              <li><Link href="#projects" className="hover:text-primary transition-colors">Work</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Careers</Link></li>
+              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/services" className="hover:text-primary transition-colors">Services</Link></li>
+              <li><Link href="/projects" className="hover:text-primary transition-colors">Work</Link></li>
+              <li><Link href="/careers" className="hover:text-primary transition-colors">Careers</Link></li>
             </ul>
           </div>
           <div>
@@ -67,8 +67,8 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-white/10 text-xs text-foreground/40 font-medium uppercase tracking-widest">
           <p>© {new Date().getFullYear()} Softadex. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/legal" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/legal" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
 

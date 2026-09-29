@@ -20,10 +20,14 @@ export default function Navbar() {
   });
 
   const navLinks = [
-    { name: "Services", href: "#services" },
-    { name: "Projects", href: "#projects" },
-    { name: "Process", href: "#process" },
-    { name: "About", href: "#about" },
+    { name: "Services", href: "/services" },
+    { name: "Projects", href: "/projects" },
+    { name: "Products", href: "/products" },
+    { name: "Roadmap", href: "/roadmap" },
+    { name: "About", href: "/about" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Careers", href: "/careers" },
+    { name: "Blog", href: "/blog" },
   ];
 
   return (
@@ -54,7 +58,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="#contact"
+            href="/contact"
             className="glass-glow px-6 py-2 rounded-full text-sm font-medium bg-white/5 hover:bg-white/10 transition-colors"
           >
             Start a Project
@@ -88,7 +92,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="#contact"
+            href="/contact"
             className="mt-4 text-center glass-glow px-6 py-3 rounded-full text-sm font-medium bg-primary/20 text-primary border border-primary/50"
             onClick={() => setIsOpen(false)}
           >
