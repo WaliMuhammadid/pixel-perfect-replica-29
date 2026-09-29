@@ -118,8 +118,8 @@ export default function Contact() {
               </div>
 
               <div className="relative group mb-8">
-                <select id="service" name="service" required className="w-full bg-transparent border-b border-white/20 py-3 outline-none focus:border-primary transition-colors appearance-none text-white">
-                  <option value="" disabled selected hidden>Select a Service</option>
+                <select id="service" name="service" required defaultValue="" className="w-full bg-transparent border-b border-white/20 py-3 outline-none focus:border-primary transition-colors appearance-none text-white">
+                  <option value="" disabled hidden>Select a Service</option>
                   <option value="web" className="bg-background text-white">Web Development</option>
                   <option value="mobile" className="bg-background text-white">Mobile Apps</option>
                   <option value="design" className="bg-background text-white">UI/UX Design</option>
