@@ -57,12 +57,10 @@ export default function Cursor() {
     <>
       {/* Inner dot */}
       <motion.div
-        className="fixed top-0 left-0 w-4 h-4 bg-primary rounded-full pointer-events-none z-[100] mix-blend-screen"
+        className="fixed top-0 left-0 w-4 h-4 bg-primary rounded-full pointer-events-none z-[100] mix-blend-screen -ml-2 -mt-2"
         style={{
           x: smoothX,
-          y: smoothY,
-          translateX: "-50%",
-          translateY: "-50%"
+          y: smoothY
         }}
         animate={{
           scale: isHovered ? 0 : 1,
@@ -71,12 +69,10 @@ export default function Cursor() {
       />
       {/* Outer ring */}
       <motion.div
-        className="fixed top-0 left-0 w-12 h-12 border border-primary rounded-full pointer-events-none z-[100] flex items-center justify-center mix-blend-screen"
+        className="fixed top-0 left-0 w-12 h-12 border border-primary rounded-full pointer-events-none z-[100] flex items-center justify-center mix-blend-screen -ml-6 -mt-6"
         style={{
           x: outerSmoothX,
-          y: outerSmoothY,
-          translateX: "-50%",
-          translateY: "-50%"
+          y: outerSmoothY
         }}
         animate={{
           scale: isHovered ? 1.5 : 1,
