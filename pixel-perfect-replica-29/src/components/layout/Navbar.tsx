@@ -79,7 +79,7 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute top-full left-6 right-6 mt-2 glass-card p-6 flex flex-col gap-4 md:hidden"
+          className="absolute top-full left-6 right-6 mt-2 bg-[#0A0C14] border border-white/10 shadow-2xl rounded-2xl p-6 flex flex-col gap-4 md:hidden z-50"
         >
           {navLinks.map((link) => (
             <Link
