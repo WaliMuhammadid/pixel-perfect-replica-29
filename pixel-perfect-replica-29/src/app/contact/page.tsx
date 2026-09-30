@@ -7,13 +7,30 @@ import { MapPin, Mail, MessageSquare, Link2, Globe } from "lucide-react";
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
-    // Simulate Netlify form submission delay
-    setTimeout(() => {
-      setStatus("success");
-    }, 2000);
+    const form = e.currentTarget;
+    
+    try {
+      const response = await fetch("https://formspree.io/f/xoevrrra", {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json",
+        },
+      });
+      if (response.ok) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("idle");
+        alert("Oops! There was a problem submitting your form");
+      }
+    } catch (error) {
+      setStatus("idle");
+      alert("Oops! There was a problem submitting your form");
+    }
   };
 
   return (
@@ -79,13 +96,9 @@ export default function Contact() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <form 
-              name="contact" 
-              method="POST" 
-              data-netlify="true" 
               onSubmit={handleSubmit}
               className="glass-card p-8 md:p-12 relative overflow-hidden"
             >
-              <input type="hidden" name="form-name" value="contact" />
               
               {status === "success" ? (
                 <motion.div 
