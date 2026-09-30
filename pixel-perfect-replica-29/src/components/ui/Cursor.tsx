@@ -5,6 +5,7 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function Cursor() {
   const [isHovered, setIsHovered] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
   
   // Use framer-motion values directly to bypass React re-renders on mouse move
   const cursorX = useMotionValue(-100);
@@ -21,6 +22,12 @@ export default function Cursor() {
   const outerSmoothY = useSpring(cursorY, outerSpringConfig);
 
   useEffect(() => {
+    // Check if device is touch-enabled
+    const checkTouch = "ontouchstart" in window || navigator.maxTouchPoints > 0 || window.matchMedia("(pointer: coarse)").matches;
+    setIsTouchDevice(checkTouch);
+    
+    if (checkTouch) return;
+
     // Add custom cursor class to body
     document.body.classList.add("custom-cursor");
 
@@ -52,6 +59,8 @@ export default function Cursor() {
       window.removeEventListener("mouseover", handleMouseOver);
     };
   }, [cursorX, cursorY]);
+
+  if (isTouchDevice) return null;
 
   return (
     <>
